@@ -1,0 +1,117 @@
+.barIndicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+    font-family: Arial;
+    overflow: hidden;
+}
+
+.barIndicator__name {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #838a8d;
+    text-align: center;
+    word-wrap: break-word;
+    overflow: hidden;
+    width: 100%;
+}
+
+.barIndicator__weight {
+    font-size: 56px;
+    font-weight: bolder;
+    margin-bottom: 15px;
+    color: #007fc8;
+}
+
+.barIndicator__bar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.triangleWrap {
+    height: 25px;
+    width: 100%;
+    position: relative;
+}
+
+.triangleWrap__triangle {
+    position: absolute;
+    transform: scale(0.3) translateX(-112px) translateY(-228px);
+}
+
+.triangle-bg-xxs, .triangle-bg-xxs:before, .triangle-bg-xxs:after {
+    width: 5em;
+    height: 5em;
+}
+
+.triangle-bg-xxs {
+    overflow: hidden;
+    position: relative;
+    margin:2em auto;
+    border-radius: 20%;
+    transform: translateY(50%) rotate(-30deg) skewY(30deg) scaleX(.866);
+}
+
+.triangle-bg-xxs:before, .triangle-bg-xxs:after{
+    position: absolute;
+    background: #007fc8;
+    pointer-events: auto;
+    content: '';
+}
+
+.triangle-bg-xxs:before {
+    border-radius: 20% 20% 20% 53%;
+    transform: scaleX(1.155) skewY(-30deg) rotate(-30deg) translateY(-42.3%)
+    skewX(30deg) scaleY(.866) translateX(-24%);
+}
+
+.triangle-bg-xxs:after {
+    border-radius: 20% 20% 53% 20%;
+    transform: scaleX(1.155) skewY(-30deg) rotate(-30deg) translateY(-42.3%)
+    skewX(-30deg) scaleY(.866) translateX(24%);
+}
+
+.bar {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.bar__segment:not(:last-child) {
+    margin-right: 2px;
+}
+
+.names {
+    width: 100%;
+    display: flex;
+}
+
+.names__name {
+    text-align: center;
+    color: #95cae8;
+    word-wrap: break-word;
+    overflow: hidden;
+    padding: 5px 5px 0 5px;
+}
+
+@media (max-width: 375px) {
+
+    .barIndicator {
+        max-width: 350px;
+    }
+
+}
+
+@media (max-width: 280px) {
+
+    .barIndicator {
+        max-width: 260px;
+    }
+
+}
